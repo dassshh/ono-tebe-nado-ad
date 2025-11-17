@@ -1,340 +1,277 @@
-
-.page {
-  margin:0;
-  padding:0;
-  color:black;
-  width: 1100px;
-}
 .header {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr min-content 1fr;
   align-items: center;
+  margin-top:92px;
+  margin-bottom:92px;
+  margin-right:50px;
+  margin-left:50px;
 }
-.header__links-list{
+.header__links-list {
   display: flex;
-  list-style: none;
-  gap:32px;
+  gap: 33px;
+  margin-top:-5px;
 }
-.header__links-list-item{
-  font-family: Raleway;
-  font-weight: 400;
-  font-style: Regular;
+.header__links-list-item {
   font-size: 18px;
-  line-height: 100%;
-  letter-spacing: 0%;
-  white-space: nowrap;
+  list-style: none;
 }
-.header__logo{
-  padding-top:92px;
-  padding-bottom:96px
+.header__links-list-item:nth-child(n+2) {
+  list-style:circle;
 }
-.header__logo-image{
+.text-main {
+  text-decoration: none;
+  color: black;
+}
+.text-either {
+  border-bottom: 1px solid;
+  text-decoration: none;
+}
+.header__logo-image {
   width: 148px;
   height: 105px;
 }
-.address{
-  margin-right:70px;
-  margin-top:95px;
-  margin-bottom:100px;
-  margin-left:184px;
-  font-family: Raleway;
-  font-weight: 400;
+.telefon-mail {
+  text-decoration: none;
+  border-bottom: 1px solid black;
+}
+.address {
+  font-style: normal;
   font-size: 18px;
   line-height: 24.3px;
-  letter-spacing: 0%;
-  white-space: nowrap;
 }
-
-.main_content{
+.address.adress-header {
+  margin-top:-4px;
+  padding-left:186px;
+}
+.main_content {
   position: relative;
   width: 1100px;
   height: 757px;
-  overflow:hidden;
-
 }
-.main-img{
-  position:absolute;
-  height:757px;
-  background-repeat: no-repeat;
+.main-img {
+  position: absolute;
+  height: 757px;
   width: 1100px;
   object-fit: cover;
 }
 .main_content::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  width: 100%;
+  height: 100%;
+  background:linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
 }
-.it , .you,  .need{
-  margin: 20px 0;
-  z-index:1;
-  font-family: Raleway;
-  font-weight: 700;
-  font-style: Bold;
+.h1_section1 {
+  display: flex;
+  justify-content: center;
+}
+.it,
+.you,
+.need {
+  z-index: 1;
   font-size: 100px;
-  line-height: 114.99999999999999%;
-  letter-spacing: 30%;
+  color: white;
+  position: absolute;
+  width: 100%;
+  text-transform:uppercase;
+}
+.it {
+  width: 286px;
+  transform: translate(-357px, 164px);
+  letter-spacing:30px;
+}
+.you {
+  width: 385px;
+  transform: translate(23px, 300px);
+  letter-spacing:30px;
+}
+.need {
+  width: 387px;
+  transform: translate(307px, 434px);
+  letter-spacing:30px;
+}
+.text_auction {
+  font-size: 22px;
   text-transform: uppercase;
-  color:white;
-  white-space: pre-wrap
-}
-.it{
-  position:absolute;
-  margin: 165px 764px 477px 50px;
-}
-.you{
-  position:absolute;
-  margin: 300px 380.5px 342px 380.5px;
-}
-.need{
+  color: white;
   position: absolute;
-  margin:435px 50px 207px 663px;
+  word-spacing: 18px;
+  z-index: 1;
+  top: 670px;
+  left: 50px;
 }
-.text_auction{
-  font-family: Raleway;
-font-weight: 400;
-font-style: Regular;
-font-size: 22px;
-line-height: 28px;
-letter-spacing: 0%;
-text-transform: uppercase;
-color:white;
-position: absolute;
-margin: 668px 413px 61px 50px;
-word-spacing:20px;
-white-space: nowrap;
-z-index: 1;
-
+.text_stavka {
+  font-size: 22px;
+  text-transform: uppercase;
+  color: white;
+  background-color: transparent;
+  border: 1px solid white;
+  padding:12px 32px;
+  position: absolute;
+  top: 655px;
+  left: 793px;
+  z-index: 1;
 }
-.text_stavka{
-font-family: Raleway;
-font-weight: 256;
-font-size: 22px;
-letter-spacing: 0%;
-text-transform: uppercase;
-color: white;
-background-color: transparent;
-border: 1px solid rgba(255, 255, 255, 1);
-padding:12px 32px 11px 31px;
-position:absolute;
-margin: 656px 50px 50px 794px;
-white-space: nowrap;
-z-index: 1;
+.section_lots {
+  margin: 181px 24px 27px 24px;
 }
-.lots{
-  font-size: 40px; 
-  margin: 180px 0 27px 0; 
-  margin-left:64px;
-  font-family: Raleway;
-font-weight: 700;
-font-style: Bold;
-line-height: 100%;
-letter-spacing: 0%;
-text-transform: uppercase;
+.lots {
+  font-size: 40px;
+  margin-left: 40px;
+  text-transform: uppercase;
 }
-.section2_ul{
+.section2_ul {
   display: flex;
-  gap: 20px; 
-  list-style: none;
-   
+  gap: 25px;
+  padding-top:26px;
 }
-.section2_li{
-  flex: 1;
-  background-color: #f5f5f5;
+.section2_li {
   overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  max-width: 800px;
-  margin-top: auto;
-  margin-bottom: 20px;
 }
-
-.text_film, .text_book, .text_picture{
-  font-family: Raleway;
-font-weight: 700;
-font-style: Bold;
-font-size: 22px;
-line-height: 120%;
-letter-spacing: 0%;
-text-transform: uppercase;
-text-decoration: underline;
-text-decoration-style: solid;
-text-decoration-thickness: 0%;
-color:white;
-text-align: left;
-
+.title_card {
+  text-decoration: underline;
+  font-size: 22px;
+  text-transform: uppercase;
+  color: white;
+  z-index: 1;
+  padding-top:48px;
+  padding-left:40px;
 }
-.text_lection, .text_pages, .text_actually{
-  font-family: Raleway;
-font-weight: 400;
-font-style: Regular;
-font-size: 20px;
-line-height: 120%;
-letter-spacing: 0%;
-color:white;
-text-align: left;
+.text_card {
+  font-size: 20px;
+  text-align: left;
+  padding-left:40px;
+  color: white;
+  z-index: 1;
+  padding-bottom:50px;
 }
-.content1, .content2, .content3{
+.content1,
+.content2,
+.content3 {
   position: relative;
-   width: 334px;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 334px;
   height: 596px;
-  overflow:hidden;
+  color: white;
+  background-size: cover;
 }
-.background-img{
+.background-img {
   position: absolute;
-  object-fit:cover;
+  object-fit: cover;
   width: 100%;
   height: 100%;
 }
 .content1::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
 }
 .content2::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
 }
 .content3::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
 }
-.text_film{
-  position: absolute;
-  z-index: 1;
-  padding:30px 40px 466px 40px;
+.text_look {
+  font-size: 20px;
+  margin: 30px 820px 0px 39px;
+  border-bottom: 1px solid;
 }
-.text_lection{
-  position: absolute;
-  z-index: 1;
-  padding:404px 40px 48px 40px;
+.about_auction_main {
+  position: relative;
+  display: flex;
+  gap: 72px;
+  margin: 78px 24px 0px 24px;
 }
-.text_book{
-  position: absolute;
-  z-index: 1;
-  padding:30px 40px 438px 40px; 
-}
-.text_pages{
-  position: absolute;
-  z-index: 1;
-  padding:188px 40px 48px 40px;
-}
-
-.text_picture{
-  position: absolute;
-  z-index: 1;
-  padding:30px 40px 438px 40px;  
-}
-.text_actually{
-  position: absolute;
-  z-index: 1;
-  padding:284px 40px 48px 40px;
-}
-.text_look{
-  font-family: Raleway;
-font-weight: 400;
-font-style: Regular;
-font-size: 20px;
-line-height: 100%;
-letter-spacing: 0%;
-margin:0px 820px 0px 64px;
-
-}
-.about_auction_main{
-  display: flex; 
-  align-items: center; 
-  margin:120px 24px 5px 24px;
-  gap: 72px; 
-}
-.circle{
+.circle {
   position: absolute;
   width: 240px;
   height: 240px;
   background-color: black;
   border-radius: 100%;
-  margin:35px 765px 320px 47px;
+  top: 76px;
+  right:765px;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
 }
-.logo_2{
-  width: 148px; 
-  height: 144px; 
-  position: absolute;
-  padding: 55px 45.52px 62px 46.48px;
-  z-index: 1;
-  
+.logo_2 {
+  width: 148px;
+  height: 114x;
 }
-.about-content{
-  padding:133px 0px 13px 359px;
+.about-content {
+  margin: 145px 0px 0px 359px;
 }
-.about_auction{
-font-family: Raleway;
-font-weight: 700;
-font-style: Bold;
-font-size: 40px;
-line-height: 100%;
-letter-spacing: 0%;
-text-transform: uppercase;
-padding:3px 402px 100px 0px;
-white-space: nowrap;;
-
+.about_auction {
+  font-size: 40px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-transform: uppercase;
+  margin-top:36px;
 }
-.text_here{
-  font-family: Raleway;
-font-weight: 400;
-font-style: Regular;
-font-size: 20px;
-line-height: 24px;
-letter-spacing: 0%;
-
+.text_here {
+  margin-top:103px;
+  margin-bottom:23.5px;
+  font-size: 20px;
+  line-height: 24px;
 }
-.text_hard{
-  font-family: Raleway;
-font-weight: 400;
-font-style: Regular;
-font-size: 20px;
-line-height: 24px;
-letter-spacing: 0%;
-
+.text_hard {
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 20px;
+  line-height: 24px;
 }
-.footer{
-  background-color: white; 
-  display: flex; 
+.footer {
+  display: flex;
   justify-content: space-between;
-  margin: 180px 50px 82px 50px;
+  margin: 181px 50px 0px 50px;
 }
-.footer_ul{
+.footer_list {
+  padding-left:5px;
+  margin-top:-1px;
+}
+.footer_ul {
+  gap:1px;
   display: flex;
   list-style: none;
   flex-direction: column;
   text-align: center;
+  margin: 0px;
 }
-.address_footer{
-  font-family: Raleway;
-  font-weight: 400;
+.address_footer {
   font-size: 18px;
   line-height: 24.3px;
-  letter-spacing: 0%;
-  white-space: nowrap;
 }
-.footer_logo_ul{
+.footer_logo_ul {
   display: flex;
-  gap:48px;
+  gap: 48px;
+  list-style: none;
 }
-/* место для вашего кода */
+.footer_list_li2 {
+  width: 48px;
+}
+.header__links-list-item-footer {
+  font-weight: 400;
+  font-size: 18px;
+}
+
